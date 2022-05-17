@@ -9,9 +9,9 @@ namespace TallerDeLenguajes
         {
             string cadena = "Hola mundo";
 
-            Console.WriteLine("Contenido de mi variable cadena actual:"+cadena+"Ingrese un mensaje: ");
+            Console.WriteLine("Contenido de mi variable cadena actual:"+cadena+"\nIngrese un mensaje: ");
             cadena = Console.ReadLine();
-            cadena = cadena.ToUpper();
+            cadena = cadena.ToLower();
             Console.WriteLine("Nuevo contenido de la cadena: "+cadena);
 
             int cantidadCar = cadena.Length;
