@@ -1,24 +1,17 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System;
 
-namespace TallerDeLenguajes
+Console.WriteLine("Ingrese un numero a Invertir: ");
+string numero1=Console.ReadLine();
+int numeroInvertido=InvertirNum(numero1);
+Console.WriteLine("El numero Invertido es: "+numeroInvertido);
+
+ int InvertirNum(string numero)
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            string cadena = "Hola mundo";
-
-            Console.WriteLine("Contenido de mi variable cadena actual:"+cadena+"\nIngrese un mensaje: ");
-            cadena = Console.ReadLine();
-            cadena = cadena.ToLower();
-            Console.WriteLine("Nuevo contenido de la cadena: "+cadena);
-
-            int cantidadCar = cadena.Length;
-            Console.WriteLine("cantidad de caracteres de la cadena: "+cantidadCar+"\nIngrese un numero entero: ");
-            cadena = Console.ReadLine();
-            int entero =Convert.ToInt32(cadena);
-            Console.Write("Numero ingresado: "+cadena);
-        }
-    }
+    char[] arreNum = numero.ToCharArray();
+    Array.Reverse(arreNum);
+    numero=new String(arreNum);
+    int invertido=Convert.ToInt32(numero);
+    return invertido;
 }
+
