@@ -27,10 +27,15 @@ do{
             Console.WriteLine("\n"+$"La resta entre {num1} y {num2} es igual a: {num1-num2}"+"\n");
             break;
         case 3:
-            Console.WriteLine("\n"+$"La division entre{num1} y {num2} es igual a: {num1/num2}"+"\n");
+            if(num1!=0&&num2==0)
+            {
+                Console.WriteLine("\n"+$"La division entre {num1} y {num2} es igual a: infinito"+"\n");
+            } else {
+                Console.WriteLine("\n"+$"La division entre {num1} y {num2} es igual a: {num1/num2}"+"\n");
+            }
             break;
         case 4:
-            Console.WriteLine("\n"+$"El producto entre{num1} y {num2} es igual a: {num1*num2}"+"\n");
+            Console.WriteLine("\n"+$"El producto entre {num1} y {num2} es igual a: {num1*num2}"+"\n");
             break;
         default:
             Console.WriteLine("\nOperacion invalida!\n");
@@ -106,7 +111,12 @@ switch (operacionC)
         Console.WriteLine($"El producto entre {operando1} y {operando2} es {operando1*operando2}");
         break;
     case '/':
-        Console.WriteLine($"El cociente entre {operando1} y {operando2} es {operando1/operando2}");
+        if(operando1!=0&&operando2==0)
+        {
+            Console.WriteLine($"El cociente entre {operando1} y {operando2} es infinito");
+        } else {
+            Console.WriteLine($"El cociente entre {operando1} y {operando2} es {operando1/operando2}");
+        }
         break;
     default:
         Console.WriteLine("No se reconoce la operacion indicada!");
